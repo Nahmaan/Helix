@@ -1,5 +1,95 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Helix.ViewModels.PatientViewModel
 @{
+    ViewData["Title"] = "Helix Reporting";
 }
+
+<h1>Helix Reporting</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        
+        <form metho="post">
+            <fieldset>
+                <legend>Patient Data</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <div>
+                                <label for="RecordId">Record Id:</label>
+                                <input type="text" name="RecordId" value="@Html.ViewData.Model.RecordId" />
+                            </div>
+                            <div>
+                                <label for="Forename">Forename:</label>
+                                <input type="text" name="Forename" value="@Html.ViewData.Model.Forename" />
+                            </div>
+                            <div>
+                                <label for="Surname">Surname:</label>
+                                <input type="text" name="RecordId" value="@Html.ViewData.Model.Surname" />
+                            </div>
+                            <div>
+                                <label for="DateOfBirth">Date Of Birth:</label>
+                                <input type="text" name="DateOfBirth" value="@Html.ViewData.Model.DateOfBirth (@Html.ViewData.Model.Age)" />
+                            </div>
+                            <div>
+                                <label for="AddressLineOne">Address Line 1:</label>
+                                <input type="text" name="AddAddressLineOneress" value="@Html.ViewData.Model.Address.LineOne" />
+                            </div>
+                            <div>
+                                <label for="AddressLineTwo">Address Line 2:</label>
+                                <input type="text" name="AddressLineTwo" value="@Html.ViewData.Model.Address.LineTwo" />
+                            </div>
+                            <div>
+                                <label for="AddressLineThree">Address Line 3:</label>
+                                <input type="text" name="AddressLineThree" value="@Html.ViewData.Model.Address.LineThree" />
+                            </div>
+                            <div>
+                                <label for="AddressLineFour">Address Line 4:</label>
+                                <input type="text" name="AddressLineFour" value="@Html.ViewData.Model.Address.LineFour" />
+                            </div>
+                            <div>
+                                <label for="HospitalNo">Hospital No:</label>
+                                <input type="text" name="HospitalNo" value="@Html.ViewData.Model.HospitalNo" />
+                            </div>
+                            <div>
+                                <label for="NhsNo">Nhs No:</label>
+                                <input type="text" name="NhsNo" value="@Html.ViewData.Model.NhsNo" />
+                            </div>
+                            <div>
+                                <label for="Clinician">Clinician:</label>
+                                <input type="text" name="Clinician" value="@Html.ViewData.Model.Clinician" />
+                            </div>
+                            <div>
+                                <label for="Source">Source:</label>
+                                <input type="text" name="Source" value="@Html.ViewData.Model.Source" />
+                            </div>
+                            <div>
+                                <label for="SampleDate">SampleDate:</label>
+                                <input type="text" name="SampleDate" value="@Html.ViewData.Model.SampleDate" />
+                            </div>
+                            <div>
+                                <label for="RequestDate">RequestDate:</label>
+                                <input type="text" name="RequestDate" value="@Html.ViewData.Model.RequestDate" />
+                            </div>
+                            <div>
+                                <label for="OrderNo">OrderNo:</label>
+                                <input type="text" name="OrderNo" value="@Html.ViewData.Model.OrderNo" />
+                            </div>
+                        </td>
+                        <td align="right">
+                            <div>
+                                <label for="CerebroRecordId">Cerebro Data Record Id:</label>
+                                <input type="text" name="CerebroRecordId" value="@Html.ViewData.Model.CerebroData.RecordId" />
+                            </div>
+                            <div>
+                                <label for="Samples">Samples:</label>
+                                <input type="text" name="Samples" value="@Html.ViewData.Model.CerebroData.Samples" />
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>
